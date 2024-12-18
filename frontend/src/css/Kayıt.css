@@ -7,7 +7,7 @@
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
   }
-  .kayıt-container {
+  .kayıt-container { 
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* İçeriği üstten başlat */
@@ -127,3 +127,33 @@
       width: 100%; /* Mobilde buton genişliği tam olsun */
     }
   }
+
+  .reg .message{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 93.5%;
+ }
+
+
+ .reg .message p{
+    width: auto;
+    transform: translateY(+20px);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    color: white;
+    font-family: 'Ubuntu Mono', monospace;
+    text-align: center;
+ }
+
+ 

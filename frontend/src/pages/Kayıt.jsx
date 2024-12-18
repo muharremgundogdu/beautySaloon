@@ -1,7 +1,6 @@
-import React from "react";
-import { useState } from 'react';
-import "../css/Kayıt.css"
-import "../css/Navbar.css"
+import React, { useState } from "react";
+import "../css/Kayıt.css";
+import "../css/Navbar.css";
 
 function Kayıt() {
   // State'ler
@@ -10,11 +9,13 @@ function Kayıt() {
   const [dob, setDob] = useState('');
   const [errors, setErrors] = useState([]);
   const [educationSelected, setEducationSelected] = useState([]);
+  const [registerMessage, setRegisterMessage] = useState(""); // Kayıt mesajı
+  const [messageColor, setMessageColor] = useState(""); // Mesaj rengi
 
   // Eğitim seçimi kontrolü 
   const handleCheckboxChange = (e) => {
     const value = e.target.nextSibling.textContent; // Checkbox'ın yanındaki metni al
-  
+
     setEducationSelected((prev) => {
       if (e.target.checked) {
         // Checkbox işaretlendiyse array'e ekle
@@ -25,25 +26,31 @@ function Kayıt() {
       }
     });
   };
-  
+
+  // Mesajı belirli süre sonra temizleme fonksiyonu
+  const clearRegisterMessage = () => {
+    setTimeout(() => {
+      setRegisterMessage("");
+    }, 5000); // 5 saniye sonra mesajı temizle
+  };
 
   // Formu kontrol etme fonksiyonu
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     let validationErrors = [];
-  
+
     // Form alanlarının kontrolü
     if (!name) validationErrors.push("Ad Soyad");
     if (!phone) validationErrors.push("Telefon Numarası");
     if (!dob) validationErrors.push("Doğum Tarihi");
-    if (!educationSelected) validationErrors.push("Eğitim Seçimi");
-  
+    if (!educationSelected.length) validationErrors.push("Eğitim Seçimi");
+
     if (validationErrors.length > 0) {
       setErrors(validationErrors);
     } else {
       setErrors([]);
-  
+
       // Backend'e veri gönderme
       try {
         const response = await fetch("http://127.0.0.1:5000/kayit", {
@@ -58,18 +65,29 @@ function Kayıt() {
             birthDate: dob,
           }),
         });
-  
+
         const data = await response.json();
         console.log("Sunucudan Gelen Yanıt:", data);
-  
-        alert("Form başarıyla gönderildi!");
+
+        if (data.case) {
+          setMessageColor("#008000");
+          setRegisterMessage(data.message);
+          setTimeout(() => {
+            window.location.href = "/";
+          }, 5000); // 5 saniye sonra yönlendir
+        } else {
+          setMessageColor("#FF0000");
+          setRegisterMessage(data.message);
+          clearRegisterMessage();
+        }
       } catch (error) {
         console.error("Hata oluştu:", error);
-        alert("Bir hata oluştu. Lütfen tekrar deneyin.");
+        setMessageColor("#FF0000");
+        setRegisterMessage("Bir hata oluştu. Lütfen tekrar deneyin.");
+        clearRegisterMessage();
       }
     }
   };
-  
 
   return (
     <div className="kayıt-container">
@@ -165,19 +183,17 @@ function Kayıt() {
 
         <button type="submit" className="submitButton">Kaydol</button>
       </form>
+
+      {/* Kayıt mesajı */}
+      {registerMessage && (
+        <div className="reg">
+          <div className="message">
+            <p style={{ color: messageColor }}>{registerMessage}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
 export default Kayıt;
-
-
-
-
-
-
-
-
-
-
-

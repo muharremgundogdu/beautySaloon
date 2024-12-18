@@ -10,7 +10,7 @@ router.post("/", async (req, res) => {
         if (!name || !phone || !Array.isArray(education) || education.length === 0 || !birthDate) {
             return res.json({
                 case: false,
-                message: "Please fill in all information."
+                message: "Lütfen Tüm Alanları Doldurun!"
             })
         }
 
@@ -19,7 +19,7 @@ router.post("/", async (req, res) => {
         if (!phoneRGX.test(phone)) {
             return res.json({
                 case: false,
-                message: "You have entered an incorrect phone number."
+                message: "Lütfen Geçerli Bir Telefon Numarası Girin!"
             })
         }
 
@@ -33,7 +33,7 @@ router.post("/", async (req, res) => {
         if (age < 18 || (age === 18 && (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)))) {
             return res.json({
                 case: false,
-                message: "You must be at least 18 years old."
+                message: "Eğitime Kayıt Olmak İçin 18 Yaşından Büyük Olmalısınız!"
             });
         }
 
@@ -49,7 +49,7 @@ router.post("/", async (req, res) => {
         if (userControl.length != 0) {
             return res.json({
                 case: false,
-                message: "ayni egitime birden fazla kez kaydolamazsiniz"
+                message: "Ayni Eğitime Birden Fazla Kez Kaydolamazsınız!"
             })
         }
 
@@ -66,20 +66,20 @@ router.post("/", async (req, res) => {
                 req.session.userID = ID
                 return res.json({
                     case: true,
-                    message: "kullanıcı kaydı başarılı bir şekilde yapıldı"
+                    message: "Kullanıcı Kaydı Başarılı Bir Şekilde Yapıldı..."
                 })
             }).catch((err) => {
                 console.log(err)
                 return res.json({
                     case: false,
-                    message: "bir hata olustu"
+                    message: "Bir Hata oluştu!"
                 })
             })
     } catch (error) {
         console.log(error)
         return res.json({
             case: false,
-            message: "beklenilmeyen bir hata oluştu"
+            message: "Beklenilmeyen Bir Hata oluştu!"
         })
     }
 })
