@@ -1,0 +1,59 @@
+.container-cube-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: white; /* Arka plan rengi */
+  gap: 2rem;
+  width: 100%;
+  height: 500px;
+}
+
+.text-slider {
+  display: flex;
+  text-align: center;
+  width: 30%;
+  height: 100%;
+
+  border-color: #fa8072;
+}
+
+.text-slider h1,
+.text-slider p {
+  margin: 0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.9); /* Arka plan efekti */
+  font-size: x-large;
+  font-weight: 50px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.text-slider h1 {
+  font-size: xx-large;
+}
+
+.cube-slider {
+  width: 70%; /* Border genişliğine göre ayarla */
+  height: 100%; /* Border yüksekliğine göre ayarla */
+  display: flex;
+  justify-content: center; /* Görüntüyü ortalar */
+  align-items: center;
+
+  overflow: hidden; /* Taşan kısımları gizle */
+}
+
+.cube-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill; /* Görüntüyü tamamen doldur, gerekirse kırp */
+}
+
+/* Aktif olmayan slaytları gizlemek için */
+.swiper-slide {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+}

@@ -1,0 +1,127 @@
+/* Blog Section */
+.blog {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .blogList {
+    display: flex; /* Flexbox kullanarak elemanları yatay hizalar */
+    flex-wrap: wrap; /* Ekran küçükse elemanlar alt satıra geçebilir */
+    gap: 20px; /* Blog itemleri arasındaki boşluk */
+    justify-content: center; /* Ortaya hizalar */
+    max-width: 1000px; /* Blog listesinin genişliği */
+    width: 100%;
+  }
+  
+  /* Blog Item Stili */
+  .blogItem {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 45%; /* Yan yana iki item için genişlik ayarı */
+  }
+  
+  .blogItem:hover {
+    transform: scale(1.05); /* Hover'da büyüme efekti */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3); /* Daha belirgin gölge */
+  }
+  
+  .blogItem img {
+    width: 100%; /* Resim genişliği tamamen kapsar */
+    height: 400px; /* Resmin yüksekliğini artırdım */
+    object-fit: cover; /* Oranı koruyarak kırpma */
+    display: block;
+  }
+  
+  .blogItem h2 {
+    font-size: 1.5em; /* Başlık boyutunu büyüttüm */
+    margin: 20px 20px 10px; /* İç boşluklar artırıldı */
+    color: #333;
+    text-align: center;
+  }
+  
+  .blogItem p {
+    font-size: 1em; /* Paragraf yazı boyutu */
+    margin: 0 20px 20px; /* Alt boşluk artırıldı */
+    color: #666;
+    text-align: center;
+  }
+  
+  .blogItem a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  /* Ana Konteyner */
+  .blogDetailContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* Arkaplan rengi beyaz */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+    border-radius: 10px;
+    font-family: "Arial", sans-serif;
+  }
+  
+  /* Başlık */
+  .blogDetailHeader h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  /* İçerik Konteyner */
+  /* Ana Konteyner */
+  /* Ana Konteyner */
+  /* Ana Konteyner */
+  .blogDetailContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-family: "Arial", sans-serif;
+  }
+  
+  /* Kart Yapısı */
+  .blogCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px; /* Kartların arasına 20px boşluk ekler */
+  }
+  
+  /* Hover Efekti */
+  .blogCard:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Resimler */
+  .blogDetailImage {
+    width: 60%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Resim Hover Efekti */
+  .blogDetailImage:hover {
+    transform: scale(1.05);
+  }

@@ -1,0 +1,46 @@
+.slideshow {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.slideshow-header {
+  font-size: 1.2rem;
+  color: #888;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.slide-content {
+  position: relative;
+  transition: opacity 0.5s ease-in-out; /* Geçiş süresi */
+}
+
+.slide-content.fade-in {
+  opacity: 1; /* Görünür */
+}
+
+.slide-content.fade-out {
+  opacity: 0; /* Görünmez */
+}
+
+.slide-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fa8072;
+  margin-bottom: 10px;
+}
+
+.underline {
+  width: 150px;
+  height: 5px;
+  background-color: #6a1b9a; /* Mor renk */
+  margin: 0 auto 20px;
+}
+
+.slide-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}

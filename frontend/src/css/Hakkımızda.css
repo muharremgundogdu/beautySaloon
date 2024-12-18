@@ -1,0 +1,94 @@
+.hakkimizda-container { /*BURASI EĞİTİME DAHİL Mİ EMİN DEĞİLİM*/
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    background-color: #f9f9f9;
+  }
+  
+  /* İçerik Alanı */
+  .hakkimizda-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 30px;
+    width: 80%;
+    max-width: 1200px;
+  }
+  
+  /* Sol Kısım - Resim Alanı */
+  .hakkimizda-content .leftSide {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; /* Resmi üstte hizala */
+  }
+  
+  .hakkimizda-content .leftSide img {
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+  }
+  
+  /* Sağ Kısım - Yazı Alanı */
+  .hakkimizda-content .rightSide {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Yazıları solda hizalar */
+  }
+  
+  /* Başlık */
+  .hakkimizda-content .rightSide .header {
+    margin-bottom: 20px;
+  }
+  
+  .hakkimizda-content .rightSide .header-title {
+    font-size: 30px;
+    font-weight: 100;
+    color: #ff6f61; /* Başlık rengi */
+    margin-bottom: 20px;
+    text-align: left;
+    font-style: italic;
+  }
+  
+  /* Bölüm Stil */
+  .section {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(27, 1, 1, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px 0;
+  }
+  
+  .section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Başlıklar */
+  .section h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+  }
+  
+  .section p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  /* Iconlar */
+  .section-icon {
+    font-size: 28px;
+    color: #ff6f61;
+  }

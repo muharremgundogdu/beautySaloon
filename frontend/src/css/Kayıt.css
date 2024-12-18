@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  .kayıt-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* İçeriği üstten başlat */
+    align-items: center; /* Ortalamak için */
+    padding: 20px;
+    max-width: 800px;
+    height: 100%; /* Yükseklik belirleyerek düzen sağlanır */
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .kayıt-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    flex-grow: 1; /* Form alanının büyümesine izin verir */
+    align-items: center;
+  }
+  
+
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 350px; 
+    font-weight: bold;
+  }
+  .formGroup input,
+  .formGroup select {
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  .formGroup-education {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width:200%;
+    margin-left: 80px ;
+    align-items: center;
+    
+  }
+  .course-options {
+    display: flex;
+    flex-direction: column; 
+  }
+  .course-options label {
+    display: flex;
+    align-items: center; 
+    font-size: 18px;
+    margin-bottom: 15px; 
+  }
+  .course-options input[type="checkbox"] {
+    width: 24px;
+    height: 24px; 
+    margin-right: 10px; 
+  }
+  .formGroup input, 
+  .formGroup select {
+    padding: 14px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  .formGroup-education label {
+    margin-bottom: 10px;
+    font-size: 15px;
+    
+  }
+  .kayıt-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+
+  }
+  
+  /* Kaydol butonu */
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .submitButton {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 200px;
+    margin-top: 20px;
+    margin:auto;
+  }
+  
+  .submitButton:hover {
+    background-color: #e55a4e;
+  }
+  
+  /* Responsive Tasarım */
+  @media (max-width: 768px) {
+    .kayıt-container {
+      padding: 15px;
+    }
+  
+    .submitButton {
+      width: 100%; /* Mobilde buton genişliği tam olsun */
+    }
+  }

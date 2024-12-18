@@ -1,0 +1,227 @@
+/* Eğitimler Section */
+/* Sayfa genel arka plan rengi */
+.eğitimler {
+  background-color: #e76f51; /* Turuncu arka plan */
+  padding: 20px;
+  margin: 0;
+  min-height: 100vh; /* Tüm ekranı kaplasın */
+  text-align: center;
+}
+
+/* Sayfa Başlığı */
+.eğitimTitle {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Kategori başlıkları */
+.categoryTitle {
+  color: #444;
+  font-size: 28px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-align: left;
+  padding-left: 20px;
+  border-bottom: 2px solid #ccc;
+}
+
+/* Eğitim kart listesi */
+.eğitimList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Eğitim kartı */
+.eğitimItem {
+  background-color: #d8caca;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 250px;
+  height: 350px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.eğitimItem:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Linklerin altı çizili olmaması */
+.eğitimLink {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px;
+}
+
+/* Kart içindeki resim */
+.eğitimItem img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+/* Kart içindeki başlık */
+.eğitimItem h3 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #e76f51; /* Uyumlu renk */
+}
+
+/* Eğitim Detay Sayfası */
+.eğitimDetail {
+  margin: 50px auto;
+  padding: 40px;
+  max-width: 1200px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.eğitimDetail h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.eğitimDetail p {
+  font-size: 18px;
+  color: #555;
+  max-width: 800px;
+  margin: 20px auto;
+  line-height: 1.6;
+}
+
+/* Resim ve İçerik Konteyneri */
+.content-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start; /* Sola hizalama */
+  gap: 40px;
+  margin-top: 30px;
+  padding-left: 40px; /* Sol taraftan içerik için boşluk */
+}
+
+/* Ekstra Resimler */
+.extraImages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Sola hizalama */
+  gap: 88px; /* Resimler arasındaki boşluk artırıldı */
+  margin-top: 40px; /* Üstteki ve alttaki resimler arasındaki boşluk artırıldı */
+  padding-left: 50px; /* Sol hizalama için boşluk */
+}
+
+.extra-image {
+  width: 333px; /* Boyut büyütüldü */
+  height: 371px; /* Boyut büyütüldü */
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.extra-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Eğitim İçeriği Listesi */
+.content-list {
+  flex: 1;
+  text-align: left;
+  font-size: 16px;
+  color: #666;
+  line-height: 2; /* Satırlar arasında daha fazla boşluk */
+  padding-left: 40px; /* Sol hizalama */
+}
+
+.content-list h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
+
+.content-list ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.content-list li {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+  text-align: left; /* Yazılar sola hizalı */
+  line-height: 1.8; /* Satır arası boşluk eklendi */
+  white-space: normal; /* Metnin doğal şekilde sarılmasına izin verildi */
+  overflow: visible; /* Görünürlüğü garantiye aldı */
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .eğitimDetail h1 {
+    font-size: 30px;
+  }
+
+  .eğitimDetail p {
+    font-size: 16px;
+  }
+
+  .content-container {
+    flex-direction: column;
+    align-items: flex-start; /* Mobilde sola hizalı */
+    padding-left: 20px;
+  }
+
+  .content-list {
+    font-size: 14px;
+    text-align: left; /* Mobilde sola hizalı */
+    margin-left: 0;
+    line-height: 1.8; /* Daha dar ekranlarda satır yüksekliği */
+  }
+
+  .extra-image {
+    width: 240px; /* Küçük ekranlarda boyut optimize edildi */
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .eğitimDetail {
+    padding: 20px;
+  }
+
+  .eğitimDetail h1 {
+    font-size: 26px;
+  }
+
+  .eğitimDetail p {
+    font-size: 14px;
+  }
+
+  .extra-image {
+    width: 200px;
+    height: 160px;
+  }
+
+  .content-list h2 {
+    font-size: 20px;
+  }
+}
+.sertifika-button {
+  height: 100%;
+
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 40px;
+  margin-left: 43%;
+}

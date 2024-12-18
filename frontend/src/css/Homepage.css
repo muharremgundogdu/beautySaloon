@@ -1,0 +1,178 @@
+.container {
+  display: flex; /* İsteğe bağlı: içeriği hizalamak için */
+  justify-content: center; /* İsteğe bağlı: yatay hizalama */
+  align-items: center; /* İsteğe bağlı: dikey hizalama */
+  width: 100%; /* Container genişliği */
+  height: 640px; /* Container yüksekliğini istediğin şekilde ayarla */
+  overflow: hidden; /* Taşmaları engelle */
+  margin: 20px;
+}
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 100px; /* Yüksekliği ihtiyaca göre ayarla */
+  overflow: hidden;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 75px;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: fade 6s infinite;
+}
+
+.slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.slide:nth-child(3) {
+  animation-delay: 4s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.sertifika-container {
+  text-align: center;
+  background-color: #fa8072; /* Belirttiğiniz renk arka plan olarak ayarlandı */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+  max-width: 600px;
+  margin: 50px auto;
+  color: #fff; /* Yazı rengi beyaz */
+}
+
+.sertifika-b {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff; /* Başlık beyaz */
+  margin-bottom: 20px;
+}
+
+.sertifika-p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #fdfdfd; /* Yazı için yumuşak bir beyaz tonu */
+  margin-bottom: 30px;
+}
+
+.sertifika-button {
+  background-color: #ffffff; /* Buton beyaz */
+  color: #fa8072; /* Yazı rengi olarak belirttiğiniz renk */
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.sertifika-button:hover {
+  background-color: #fa8072; /* Hover durumunda arka plan renk değişimi */
+  color: #ffffff; /* Hover durumunda yazı rengi beyaz */
+}
+.gif-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-top: 150px;
+  background-color: #fa8072;
+}
+.gif {
+  width: 25%;
+  object-fit: cover;
+  opacity: 5s;
+}
+.gif-container:hover {
+  transition: duration 2s;
+  transition: ease 3s;
+  background-color: red;
+}
+.img-container {
+  display: flex;
+  width: 100%;
+  height: 250px;
+  margin-top: 150px;
+  border: solid;
+  border-color: #fa8072;
+}
+.img-combined {
+  object-fit: cover;
+  overflow: hidden;
+}
+.footer {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  width: 100%;
+  border: solid;
+  background-color: #fa8072;
+}
+.footer-span1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px;
+}
+
+.footer-span1 h1 {
+  color: black;
+  font-size: 35px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.footer-span1 p {
+  color: black;
+  font-size: x-large;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+}
+.footer-span2 h5 {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  margin: 0;
+}
+.footer-span2 button {
+  margin: 0;
+  height: 55px;
+  width: auto;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+.footer-span2 button:hover {
+  color: #fa8072;
+  background-color: black;
+  font-size: 17.5px;
+  transition: ease 3s;
+}
+.footer-span2 h5:hover {
+  font-size: 55px;
+}

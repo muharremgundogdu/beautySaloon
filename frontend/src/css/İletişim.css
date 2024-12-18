@@ -1,0 +1,140 @@
+/* Genel Ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .iletisim {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+  }
+  
+  .iletisim-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .iletişim .leftSide {
+    flex: 1;
+  }
+  
+  .contact-image {
+    width: 88%;
+    height: 88%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    margin-left:-70px;
+  }
+  
+  /* Contact Info Text Hover Effect */
+  .contact-item:hover .contact-text {
+    color: #ff7f7f;
+  }
+  
+  .iletişim .rightSide {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+  }
+  
+  .contact-box {
+    background-color: #fff;
+    padding: 50px; /* İçerik alanını genişletmek için padding artırıldı */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Maksimum genişlik belirlendi */
+    width: 200%; /* Yüzde ile genişlik ayarı */
+    margin-left: -100px;
+    margin-right: 300px;
+    margin-top:80px;
+  }
+  
+  .contact-box h2 {
+    font-size: 28px;
+    color: #5a4a4a;
+    margin-bottom: 25px;
+    margin-left:90px;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .contact-icon {
+    font-size: 24px;
+    color: #ff6f61;
+  }
+  
+  .contact-text {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Social Media */
+  .social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .social-media p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #5a4a4a;
+    margin-top: 30px;
+    margin-left: -200px;
+  }
+  
+  .social-icon {
+    font-size: 50px;
+    color: #ff6f61;
+    transition: transform 0.3s;
+    margin-left: -150px;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Responsive Tasarım */
+  @media (max-width: 768px) {
+    .iletisim-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .iletişim .leftSide {
+      margin-bottom: 20px;
+    }
+  
+    .contact-image {
+      width: 80%;
+    }
+  
+    .iletişim .rightSide {
+      width: 100%;
+    }
+  }

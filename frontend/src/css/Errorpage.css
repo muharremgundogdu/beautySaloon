@@ -1,0 +1,50 @@
+/* Genel container */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+/* Hata kodu */
+.errorCode {
+  font-size: 10rem;
+  font-weight: bold;
+  margin: 0;
+  color: #ff6b6b;
+}
+
+/* Hata mesajı */
+.errorMessage {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Açıklama */
+.description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+/* Ana sayfaya dön butonu */
+.homeButton {
+  padding: 10px 20px;
+  background-color: #ff6b6b;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.homeButton:hover {
+  background-color: #e85959;
+  transition: ease-in-out 1s;
+}
